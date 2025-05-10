@@ -1,20 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Activities in Manang</title>
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Font Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-      /* Apply Roboto font to the whole page */
-      body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; /* Prevent horizontal overflow */
-      }
-      
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everest Guide</title>
+  <link rel="icon" href="/img/assets/favicon.png" type="image/png">
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Apply Roboto font to the whole page */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    /* Style for the carousel items */
+    .carousel-item {
+      height: 80vh; /* Ensure carousel image height fits within viewport */
+    }
+
+    /* Ensure images fill the container without overflowing */
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the container area */
+    }
+
+    /* Style for the carousel captions to center the text */
+    .carousel-caption.custom-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+      text-align: center;
+      color: white;
+    }
+
+    /* Optional: Add text-shadow for better visibility */
+    .carousel-caption.custom-caption h1,
+    .carousel-caption.custom-caption p {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
     .footer {
       background-color: #343a40;
       color: white;
@@ -46,28 +77,13 @@
     .navbar-toggler {
       margin-left: auto;
     }
-    .hero-banner {
-      background: url('../img/banner1.jpg') center center/cover no-repeat;
-      height: 400px;
-      position: relative;
-      color: white;
-    }
-    .hero-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .hero-banner h1 {
-      position: relative;
-      z-index: 1;
-    }
-      </style>
+  </style>
 </head>
 <body>
+<header>
   <!-- Logo -->
   <div class="container text-center py-3">
-    <img src="../../img/logo.png" alt="Logo">
+    <a href="#"><img src="img/assets/logo.png" alt="Logo"></a>
   </div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -77,232 +93,379 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">About</a>
+            <a class="nav-link text-white" href="page/about.html">About</a>
           </li>
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Nepal Trekking
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Everest Base Camp</a>
-                            <ul class="dropdown-menu" aria-labelledby="topTenDropdown">
-                <li><a class="dropdown-item" href="#">Trek 1</a></li>
-                <li><a class="dropdown-item" href="#">Trek 2</a></li>
-                <li><a class="dropdown-item" href="#">Trek 3</a></li>
-                <li><a class="dropdown-item" href="#">Trek 4</a></li>
-                <li><a class="dropdown-item" href="#">Trek 5</a></li>
-                <li><a class="dropdown-item" href="#">Trek 6</a></li>
-                <li><a class="dropdown-item" href="#">Trek 7</a></li>
-                <li><a class="dropdown-item" href="#">Trek 8</a></li>
-                <li><a class="dropdown-item" href="#">Trek 9</a></li>
-                <li><a class="dropdown-item" href="#">Trek 10</a></li>
+              <li><a class="dropdown-item" href="#">Everest Region</a></li>
+              <li><a class="dropdown-item" href="#">Langtang Region</a></li>
+              <li><a class="dropdown-item" href="#">Manaslu Region</a></li>
+              <li><a class="dropdown-item" href="#">Annapurna Region</a></li>
+              <li><a class="dropdown-item" href="#">Dolpo Region</a></li>
             </ul>
-
-              </li>
-              <li><a class="dropdown-item" href="#">Annapurna Circuit</a></li>
-              <li><a class="dropdown-item" href="#">Manaslu Circuit</a></li>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link text-white" href="blog.html">Blogs & Updates</a>
+          </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Travel Guide
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="travel-guide/nepal-visa.html">Nepal Visa</a></li>
+              <li><a class="dropdown-item" href="travel-guide/equipment-checklist.html">Equipment Checklist</a></li>
+              <li><a class="dropdown-item" href="travel-guide/best-trekking-season.html">Best Trekking Season</a></li>
+              <li><a class="dropdown-item" href="travel-guide/nepal-at-a-glance.html">Nepal at a glance</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Flight Cancellation</a></li> -->
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Blogs</a>
+          <li class="nav-item" style="border:2px solid rgb(229, 220, 220); border-radius:3px;">
+            <a class="nav-link text-white" href="blog.html">Top 10 Treks</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Travel Guides</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">News & Updates</a>
-          </li>
-          <li class="nav-item dropdown" style="border:2px solid white; border-radius: 3px;">
+          <!-- <li class="nav-item dropdown" style="border:2px solid white; border-radius: 3px;">
             <a class="nav-link dropdown-toggle text-white" href="#" id="topTenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Top 10 Treks
             </a>
             <ul class="dropdown-menu" aria-labelledby="topTenDropdown">
-                <li><a class="dropdown-item" href="#">Trek 1</a></li>
-                <li><a class="dropdown-item" href="#">Trek 2</a></li>
-                <li><a class="dropdown-item" href="#">Trek 3</a></li>
-                <li><a class="dropdown-item" href="#">Trek 4</a></li>
-                <li><a class="dropdown-item" href="#">Trek 5</a></li>
-                <li><a class="dropdown-item" href="#">Trek 6</a></li>
-                <li><a class="dropdown-item" href="#">Trek 7</a></li>
-                <li><a class="dropdown-item" href="#">Trek 8</a></li>
-                <li><a class="dropdown-item" href="#">Trek 9</a></li>
-                <li><a class="dropdown-item" href="#">Trek 10</a></li>
+                <li><a class="dropdown-item" href="trip/everest-base-camp-trek.html">Everest Base Camp Trek</a></li>
+                <li><a class="dropdown-item" href="trip/annapurna-base-camp-trek.html">Annapurna Base Camp Trek</a></li>
+                <li><a class="dropdown-item" href="trip/annapurna-circuit-trek.html">Annapurna Circuit Trek</a></li>
+                <li><a class="dropdown-item" href="trip/langtang-valley-trek.html">Langtang Valley Trek</a></li>
+                <li><a class="dropdown-item" href="trip/manaslu-circuit-trek.html">Manaslu Circuit Trek</a></li>
+                <li><a class="dropdown-item" href="trip/tsum-valley-trek.html">Tsum Valley Trek</a></li>
+                <li><a class="dropdown-item" href="trip/mardi-himal-trek.html">Mardi Himal Trek</a></li>
+                <li><a class="dropdown-item" href="trip/ghorepani-poonhill-trek.html">Ghorepani Poonhill Trek</a></li>
+                <li><a class="dropdown-item" href="trip/upper-dolpo-trek.html">Upper Dolpo Trek</a></li>
+                <li><a class="dropdown-item" href="kanchenjunga-base-camp-trek.html">Kanchenjunga Base Camp Trek</a></li>
             </ul>
-        </li>
+        </li> -->
+        
           <li class="nav-item">
-            <a class="nav-link text-white" href="">Contact</a>
+            <a class="nav-link text-white" href="page/contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Hero Banner -->
-  <section class="hero-banner d-flex align-items-center justify-content-center text-center">
-    <h1 class="display-4 fw-bold">Rest Day Activities in Manang</h1>
-  </section>
-<!-- Blog Container -->
-<div class="container my-5">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-
-        <!-- Introduction -->
-        <section class="mb-4">
+</header>
+  <!-- Banner Section with Fading Carousel -->
+  <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/assets/banner1.jpg" class="d-block w-100" alt="Annapurna Circuit Trek">
+        <div class="carousel-caption custom-caption">
+          <h1>Explore the Annapurnas</h1>
+          <p>Explore the western Nepal Himalayas</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/assets/banner2.jpg" class="d-block w-100" alt="Everest Base Camp Trek">
+        <div class="carousel-caption custom-caption">
+          <h1>Discover the Himalayas</h1>
+          <p>Your adventure starts here</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<!-- About Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="mb-4">About</h2>
           <p class="lead">
-            Manang, at an altitude of 3,540 meters, is a popular rest stop on the <a href="https://www.himalayanecologicaltrek.com/annapurna-circuit-trek" style="text-decoration: none;">Annapurna Circuit Trek</a>. While it's a vital place to acclimatize, it's also full of culture, scenic hikes, and interesting places to explore. Here are some of the best activities to do during your rest day in Manang.
+            Welcome to my blog! I share my love for trekking, nature, and the rich culture of Nepal through stories, travel guides, and personal insights from the trails. Whether you're an experienced trekker or planning your first mountain journey, you'll find inspiration and practical tips here.
           </p>
-        </section>
-
-        <!-- Table of Contents -->
-        <nav class="mb-5">
-          <h2 class="h4">Table of Contents</h2>
-          <ul class="list-unstyled">
-            <li><a href="#hra" class="text-decoration-none text-primary">1. Visit the Himalayan Rescue Association (HRA)</a></li>
-            <li><a href="#gangapurna" class="text-decoration-none text-primary">2. Hike to Gangapurna Lake and Glacier</a></li>
-            <li><a href="#gompas" class="text-decoration-none text-primary">3. Explore Bhojo and Praken Gompas</a></li>
-            <li><a href="#lama" class="text-decoration-none text-primary">4. Visit the 100 Rupees Lama</a></li>
-            <li><a href="#talks" class="text-decoration-none text-primary">5. Attend an Acclimatization Talk</a></li>
-            <li><a href="#food" class="text-decoration-none text-primary">6. Try Local Cuisine and Bakeries</a></li>
-            <li><a href="#views" class="text-decoration-none text-primary">7. Enjoy Mountain Views</a></li>
-          </ul>
-        </nav>
-
-        <!-- Blog Sections -->
-        <section id="hra" class="mb-4">
-          <h3 class="h5">1. Visit the Himalayan Rescue Association (HRA)</h3>
           <p>
-            The HRA clinic in Manang provides daily talks about altitude sickness and how to prevent it. It’s a must-visit for trekkers heading toward Thorong La.
+            Join me as I explore the diverse regions of Nepal, from the towering peaks of the Himalayas to the
+            serene villages tucked away in remote valleys. Every journey holds a story, and I'm here to share them with you.
           </p>
-        </section>
-        <div class="text-center my-4">
-            <img src="../../img/HRA.jpg" alt="Descriptive alt text" class="img-fluid rounded">
-            <small class="d-block mt-2 text-muted">Himalayan Rescue Association</small>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="py-5 bg-light" id="sustainable-tourism">
+  <div class="container text-center">
+    <h2 class="display-5 fw-bold text-success mb-4">Sustainable Tourism for a Greener Future</h2>
+    <p class="lead text-muted mb-5">
+      We are dedicated to preserving the natural beauty and cultural heritage of Nepal.
+      Our eco-conscious adventures support local communities, reduce environmental footprints, and promote responsible travel.
+    </p>
+    
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="bi bi-leaf-fill text-success fs-1"></i>
+            </div>
+            <h5 class="card-title text-success">Eco-Friendly Practices</h5>
+            <p class="card-text">
+              From zero-waste treks to clean-up campaigns, we minimize our environmental impact.
+            </p>
           </div>
-          
-
-        <section id="gangapurna" class="mb-4">
-          <h3 class="h5">2. Hike to Gangapurna Lake and Glacier</h3>
-          <p>
-            Just a short walk from the village, this spot offers great views of Gangapurna Glacier and turquoise lake waters — perfect for a scenic acclimatization hike.
-          </p>
-        </section>
-
-        <section id="gompas" class="mb-4">
-          <h3 class="h5">3. Explore Bhojo and Praken Gompas</h3>
-          <p>
-            These small monasteries above Manang provide not only spiritual insight but also stunning vistas. Monks often give blessings to passing trekkers.
-          </p>
-        </section>
-
-        <section id="lama" class="mb-4">
-          <h3 class="h5">4. Visit the 100 Rupees Lama</h3>
-          <p>
-            A short uphill hike leads to a cave where a local lama offers blessings for safe passage over the Thorong La Pass.
-          </p>
-        </section>
-
-        <section id="talks" class="mb-4">
-          <h3 class="h5">5. Attend an Acclimatization Talk</h3>
-          <p>
-            Free daily talks are held at the HRA clinic around 3 PM, discussing altitude-related issues and how to stay healthy at high elevations.
-          </p>
-        </section>
-
-        <section id="food" class="mb-4">
-          <h3 class="h5">6. Try Local Cuisine and Bakeries</h3>
-          <p>
-            Enjoy fresh apple pies, yak cheese, and traditional thukpa in one of Manang’s cozy bakeries or tea houses.
-          </p>
-        </section>
-
-        <section id="views" class="mb-5">
-          <h3 class="h5">7. Enjoy Mountain Views</h3>
-          <p>
-            Gaze at the peaks of Annapurna II, III, Gangapurna, and Tilicho from various points in the village — especially at sunrise or sunset.
-          </p>
-        </section>
-
-        <!-- Tips Section -->
-        <section class="mb-5">
-          <h2 class="h5">Tips for Your Rest Day in Manang</h2>
-          <ul>
-            <li>Drink plenty of water</li>
-            <li>Avoid alcohol and smoking</li>
-            <li>Take short hikes for better acclimatization</li>
-            <li>Visit the clinic if feeling any AMS symptoms</li>
-          </ul>
-        </section>
-
-        <!-- Conclusion -->
-        <section>
-          <p>
-            Manang is more than a resting spot — it’s a highlight of the Annapurna Circuit. Taking time to explore the village enhances your trekking journey and helps prepare you for the challenging days ahead.
-          </p>
-        </section>
-
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="bi bi-people-fill text-success fs-1"></i>
+            </div>
+            <h5 class="card-title text-success">Community Empowerment</h5>
+            <p class="card-text">
+              We partner with local guides and businesses, ensuring tourism benefits the people.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="bi bi-globe-asia-australia text-success fs-1"></i>
+            </div>
+            <h5 class="card-title text-success">Cultural & Natural Respect</h5>
+            <p class="card-text">
+              We educate travelers to respect local traditions, wildlife, and nature.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- Contact Section -->
-<section class="py-5 bg-light" id="contact">
+</section>
+
+  <!-- Featured Video Section -->
+<section class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Contact Us</h2>
+      <h2 class="text-center mb-4">Featured Video</h2>
       <div class="row justify-content-center">
-        <div class="col-md-8">
-          <p class="text-center mb-4">Have any questions or need more information? Feel free to reach out to us!</p>
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Your Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Your Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Your Message</label>
-              <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </div>
-          </form>
+        <div class="col-md-10 col-lg-8">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/NKzIHcRxlo4?start=22" 
+                    title="Featured Video" 
+                    allowfullscreen></iframe>
+          </div>
+          <p class="mt-3 text-center">
+            A glimpse into the stunning landscapes and cultural richness of Nepal.
+          </p>
         </div>
       </div>
     </div>
   </section>
-    <!-- Contact Details and Newsletter Section -->
-    <section class="py-5">
-        <div class="container">
-          <h2 class="text-center mb-4">Our Location & Newsletter</h2>
-          <div class="row">
-            <!-- Office Location on the Left -->
-            <div class="col-md-6">
-              <h5>Our Office Address</h5>
-              <p>
-                Everest Guide<br>
-                123 Trekker's Avenue<br>
-                Kathmandu, Nepal<br>
-                <strong>Phone:</strong> +977 1 1234567890<br>
-                <strong>Email:</strong> info@everestguide.com
-              </p>
-            </div>
-            <!-- Newsletter Signup on the Right -->
-            <div class="col-md-6">
-              <h5>Subscribe to Our Newsletter</h5>
-              <p>Stay updated with our latest trekking news, offers, and blog posts.</p>
-              <form>
-                <div class="mb-3">
-                  <label for="newsletter-email" class="form-label">Enter your email</label>
-                  <input type="email" class="form-control" id="newsletter-email" placeholder="Your email" required>
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Subscribe</button>
-                </div>
-              </form>
-            </div>
+<!-- FAQ Section -->
+<div class="container my-5">
+    <h2 class="mb-4 text-center">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            Is it safe to trek in Nepal?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, trekking in Nepal is generally safe, especially on popular routes. Hiring a guide and staying informed about weather and conditions enhances safety.
           </div>
         </div>
-      </section>    
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            Is trekking in Nepal hard?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Difficulty varies by route. Some treks like Everest Base Camp or Annapurna Circuit require good fitness, while others are moderate and beginner-friendly.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            Can you trek independently in Nepal?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Independent trekking is allowed in many regions. However, in restricted areas like Upper Mustang or Manaslu, a guide and group are mandatory.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            Why should you trek in Nepal?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Nepal offers breathtaking landscapes, rich cultures, and unforgettable mountain experiences, making it a top destination for trekkers worldwide.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            Is trekking in Nepal expensive?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Trekking costs vary. Budget treks are affordable, while remote regions or luxury lodges cost more. Permit fees and guide services add to the total.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+            What is the trekking rule in Nepal?
+          </button>
+        </h2>
+        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            As of 2023, solo trekking is restricted in most regions. You must register with a licensed trekking agency and hire a guide for your safety.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+            How fit do you need to be to trek in Nepal?
+          </button>
+        </h2>
+        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            A moderate level of fitness is usually enough. Training with hikes, cardio, and strength building beforehand is highly recommended.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+            What accommodations are available while trekking in Nepal?
+          </button>
+        </h2>
+        <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Most treks offer teahouse lodging—basic but cozy. In remote or less-traveled areas, tented camping may be necessary.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+            How can you prepare to trek in Nepal?
+          </button>
+        </h2>
+        <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Build your fitness, research your route, pack wisely, and consult with a reputable trekking agency for permits and logistics.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq10">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+            Which is the most famous trail in Nepal?
+          </button>
+        </h2>
+        <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            The Everest Base Camp trail is Nepal’s most iconic trek, followed closely by the Annapurna Circuit and Langtang Valley routes.
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <!-- Latest Posts Section Start ======= -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center text-success fw-bold">Latest Blog Posts</h2>
+
+    <div class="row g-4">
+      <!-- Blog Post 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <!-- Thumbnail Image (Recommended size: 600x400px) -->
+          <img 
+            src="/img/thumbnail/thumbnail-activities-in-manang.jpg" 
+            class="card-img-top img-fluid" 
+            alt="Thumbnail: Rest Day Activities in Manang"
+            style="height: 200px; object-fit: cover;">
+          
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Rest Day Activities in Manang</h5>
+            <p class="card-text text-muted">
+              Manang, at an altitude of 3,540 meters, is a popular rest stop on the Annapurna Circuit. Here are some of the best activities to do during your rest day in Manang.
+            </p>
+            <a href="/post/rest-day-acitivities-in-manang.html" class="btn btn-outline-success mt-auto">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more blog cards as needed -->
+    </div>
+  </div>
+</section>
+<!-- ======= Laptest Posts Section End ======= -->
+<!-- Contact Details and Newsletter Section -->
+<section class="py-5 bg-dark bg-opacity-10">
+  <div class="container">
+    <div class="row">
+      <!-- Office Location on the Left -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h5 class="text-dark">Our Office Address</h5>
+        <p class="text-muted">
+          Everest Guide<br>
+          123 Trekker's Avenue<br>
+          Kathmandu, Nepal<br>
+          <strong>Phone:</strong> +977 1 1234567890<br>
+          <strong>Email:</strong> info@everestguide.com
+        </p>
+      </div>
+
+      <!-- Newsletter Signup on the Right -->
+      <div class="col-md-6">
+        <h5 class="text-dark">Subscribe to Our Newsletter</h5>
+        <p class="text-muted">Stay updated with our latest trekking news, offers, and blog posts.</p>
+        <form>
+          <div class="mb-3">
+            <label for="newsletter-email" class="form-label">Enter your email</label>
+            <input type="email" class="form-control" id="newsletter-email" placeholder="Your email" required>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
@@ -313,7 +476,6 @@
       <p class="mt-3 mb-0">&copy; 2025 Everest Guide. All rights reserved.</p>
     </div>
   </footer>
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <!--Start of Tawk.to Script-->
