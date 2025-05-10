@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Apply Roboto font to the whole page */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    /* Style for the carousel items */
+    .carousel-item {
+      height: 80vh; /* Ensure carousel image height fits within viewport */
+    }
+
+    /* Ensure images fill the container without overflowing */
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the container area */
+    }
+
+    /* Style for the carousel captions to center the text */
+    .carousel-caption.custom-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+      text-align: center;
+      color: white;
+    }
+
+    /* Optional: Add text-shadow for better visibility */
+    .carousel-caption.custom-caption h1,
+    .carousel-caption.custom-caption p {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    li.nav-item {
+      padding: 0 1em;
+    }
+
+    /* Center align navbar items */
+    .navbar-nav {
+      justify-content: center;
+      width: 100%;
+    }
+
+    /* Move the burger menu to the right */
+    .navbar-toggler {
+      margin-left: auto;
+    }
+    .about-section {
+      background-color: #f4f4f4;
+      padding: 60px 0;
+    }
+    .about-image {
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .about-content {
+      text-align: justify;
+    }
+    .values-section {
+      background-color: #f16334;
+      color: white;
+      padding: 40px 0;
+    }
+    .values-section h3 {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <div class="container text-center py-3">
+    <img src="../../img/assets/logo.png" alt="Logo">
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Nepal Trekking
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Everest Base Camp</a>
+                            <ul class="dropdown-menu" aria-labelledby="topTenDropdown">
+                <li><a class="dropdown-item" href="#">Trek 1</a></li>
+                <li><a class="dropdown-item" href="#">Trek 2</a></li>
+                <li><a class="dropdown-item" href="#">Trek 3</a></li>
+                <li><a class="dropdown-item" href="#">Trek 4</a></li>
+                <li><a class="dropdown-item" href="#">Trek 5</a></li>
+                <li><a class="dropdown-item" href="#">Trek 6</a></li>
+                <li><a class="dropdown-item" href="#">Trek 7</a></li>
+                <li><a class="dropdown-item" href="#">Trek 8</a></li>
+                <li><a class="dropdown-item" href="#">Trek 9</a></li>
+                <li><a class="dropdown-item" href="#">Trek 10</a></li>
+            </ul>
+
+              </li>
+              <li><a class="dropdown-item" href="#">Annapurna Circuit</a></li>
+              <li><a class="dropdown-item" href="#">Manaslu Circuit</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Travel Guides</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">News & Updates</a>
+          </li>
+          <li class="nav-item dropdown" style="border:2px solid white; border-radius: 3px;">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="topTenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Top 10 Treks
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="topTenDropdown">
+                <li><a class="dropdown-item" href="#">Trek 1</a></li>
+                <li><a class="dropdown-item" href="#">Trek 2</a></li>
+                <li><a class="dropdown-item" href="#">Trek 3</a></li>
+                <li><a class="dropdown-item" href="#">Trek 4</a></li>
+                <li><a class="dropdown-item" href="#">Trek 5</a></li>
+                <li><a class="dropdown-item" href="#">Trek 6</a></li>
+                <li><a class="dropdown-item" href="#">Trek 7</a></li>
+                <li><a class="dropdown-item" href="#">Trek 8</a></li>
+                <li><a class="dropdown-item" href="#">Trek 9</a></li>
+                <li><a class="dropdown-item" href="#">Trek 10</a></li>
+            </ul>
+        </li>
+        
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- About Us Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Section -->
+        <div class="col-lg-6">
+          <h1 class="display-4 text-primary">About Us</h1>
+          <p class="lead about-content">
+            Welcome to Trekking Adventures! We are passionate about guiding adventurers through the breathtaking landscapes of Nepal, Tibet, Bhutan, and beyond. With over 25 years of experience, we offer personalized, expertly crafted trekking journeys that are unforgettable.
+          </p>
+          <p class="about-content">
+            Our founder, Bikesh Rana, is an expert trekker with years of personal experience in the Himalayas and other global trekking regions. Having completed the Great Himalaya Trail and led many successful expeditions, Bikesh embodies the spirit of exploration and adventure, making your journey with us truly special.
+          </p>
+          <p class="about-content">
+            At Trekking Adventures, our mission is to offer more than just a trek. We create life-changing experiences where you can immerse yourself in nature, culture, and adventure, all while being guided by local experts who understand the terrain, people, and spirit of the Himalayas.
+          </p>
+        </div>
+        
+        <!-- Image Section -->
+        <div class="col-lg-6">
+          <img src="../../img/bikesh-rana-island-peak.jpg" alt="Trekking in the Himalayas" class="img-fluid about-image">
+        </div>
+      </div>
+
+      <!-- Our Values Section -->
+      <div class="row values-section mt-5">
+        <div class="col-12 text-center">
+          <h3 class="display-4">Our Core Values</h3>
+          <ul class="list-unstyled">
+            <li><strong>Passion:</strong> We are driven by a love for the mountains and adventure.</li>
+            <li><strong>Expertise:</strong> 25+ years of experience in leading treks through challenging terrains.</li>
+            <li><strong>Safety:</strong> Your safety is our priority, ensuring an enjoyable trek with experienced guides.</li>
+            <li><strong>Sustainability:</strong> We promote eco-friendly practices to preserve nature's beauty for future generations.</li>
+            <li><strong>Authenticity:</strong> We focus on offering authentic, culturally rich experiences in every destination.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Details and Newsletter Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Location & Newsletter</h2>
+      <div class="row">
+        <!-- Office Location on the Left -->
+        <div class="col-md-6">
+          <h5>Our Office Address</h5>
+          <p>
+            Everest Guide<br>
+            123 Trekker's Avenue<br>
+            Kathmandu, Nepal<br>
+            <strong>Phone:</strong> +977 1 1234567890<br>
+            <strong>Email:</strong> info@everestguide.com
+          </p>
+        </div>
+        <!-- Newsletter Signup on the Right -->
+        <div class="col-md-6">
+          <h5>Subscribe to Our Newsletter</h5>
+          <p>Stay updated with our latest trekking news, offers, and blog posts.</p>
+          <form>
+            <div class="mb-3">
+              <label for="newsletter-email" class="form-label">Enter your email</label>
+              <input type="email" class="form-control" id="newsletter-email" placeholder="Your email" required>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>Follow us on:</p>
+      <a href="https://www.facebook.com/himalayanecological/"><img src="https://img.icons8.com/ios-filled/20/ffffff/facebook-new.png"/> Facebook</a>
+      <a href="https://www.instagram.com/himalayanecological_trekking/"><img src="https://img.icons8.com/ios-filled/20/ffffff/instagram-new.png"/> Instagram</a>
+      <a href="https://x.com/HimalayanEcolo3"><img src="https://img.icons8.com/ios-filled/20/ffffff/twitter.png"/> Twitter</a>
+      <p class="mt-3 mb-0">&copy; 2025 Everest Guide. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5d07abdc53d10a56bd7a7aea/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
